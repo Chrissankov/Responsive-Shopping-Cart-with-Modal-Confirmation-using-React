@@ -1,0 +1,213 @@
+/* Background overlay for darkening the page */
+.modal--background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+  z-index: 9998; /* Behind the modal but above the rest of the content */
+}
+
+/* Center the modal */
+.modal--overlay {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  z-index: 9999; /* On top of the dark background */
+}
+
+/* Container styling inside the modal */
+.modal--container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: flex-start;
+  justify-content: center;
+  width: 20rem;
+  padding: 1rem;
+}
+
+.modal--container .success {
+  width: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.modal--container h2 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-shadow: 0.5px 0.5px 0 black;
+  margin: 0;
+}
+
+.hope {
+  color: #696664;
+  font-weight: 700;
+}
+
+.modal--container ul {
+  background-color: #524c481a;
+  width: 100%;
+  list-style-type: none;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal--container li {
+  display: flex;
+}
+
+.modal--container img {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.modal--name {
+  color: black;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  margin-left: 0.5rem;
+  height: fit-content;
+  white-space: nowrap;
+}
+
+.modal--data {
+  position: absolute;
+  margin-top: 0.5rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-left: 2.5rem;
+  column-gap: 6%;
+}
+
+.modal--quantity {
+  color: #c83b0e;
+  font-weight: 900;
+}
+
+.modal--iprice {
+  color: #ae9e9c;
+  padding: 0;
+  margin: 0;
+}
+
+.modal--price {
+  color: black;
+  font-weight: 900;
+}
+
+.modal--divider {
+  position: absolute;
+  border-bottom: 1px solid #cccccc6e;
+  margin-top: 2.5rem;
+  width: 17rem;
+  margin-bottom: 2.5rem;
+}
+
+.modal--totalPrice {
+  color: #7e7a79;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal--totalPrice span {
+  color: black;
+  font-size: 1rem;
+  font-weight: 900;
+  text-shadow: 0.3px 0.3px 0 black;
+}
+
+.start-new-order {
+  font-family: inherit;
+  font-size: 0.7rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border: none;
+  background-color: #c83b0e;
+  color: white;
+  border-radius: 0.9rem;
+  width: 100%;
+  margin-top: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.start-new-order:hover {
+  background-color: #aa340c;
+}
+
+@media (max-width: 800px) {
+  .modal--container {
+    position: absolute; /* Change to absolute positioning */
+    top: 9%; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width of the viewport */
+    height: 95%; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: flex-start; /* Center items horizontally */
+    justify-content: flex-start; /* Start content from the top */
+    padding: 21%; /* Increase padding for better spacing */
+    padding-top: 9%;
+  }
+  .modal--container .success {
+    width: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .modal--container h2 {
+    font-size: 2rem;
+  }
+
+  .modal--container h2 span {
+    display: block;
+  }
+
+  .hope {
+    font-size: 1rem;
+  }
+
+  .modal--name {
+    font-size: 0.7rem;
+  }
+
+  .modal--data {
+    column-gap: 13%;
+    font-size: 0.7rem;
+  }
+
+  .modal--divider {
+    width: 55%;
+  }
+
+  .start-new-order {
+    align-self: center;
+    font-family: inherit;
+    font-size: 0.7rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: #c83b0e;
+    color: white;
+    border-radius: 0.9rem;
+    width: 80%;
+    margin-top: 1rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  .start-new-order:hover {
+    background-color: #aa340c;
+  }
+}
