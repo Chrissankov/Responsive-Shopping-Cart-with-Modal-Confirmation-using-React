@@ -1,11 +1,6 @@
 import "../Modal.css";
 
-export default function Modal({
-  totalPrice,
-  cartItems,
-  handleNewOrder,
-  products,
-}) {
+export default function Modal({ totalPrice, cartItems, handleNewOrder }) {
   return (
     <div className="modal--background">
       <div className="model--overlay">
